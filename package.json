@@ -1,0 +1,42 @@
+{
+    "name": "mutual",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "asyncwait": "^1.0.2",
+        "babel-preset-node5": "^12.0.0",
+        "babel-register": "^6.18.0",
+        "body-parser": "~1.0.1",
+        "express": "~4.0.0",
+        "mysql": "^2.12.0",
+        "sequelize": "^3.29.0",
+        "gulp-live-server": "0.0.30",
+        "gulp-nodemon": "^2.2.1",
+        "gulp-plumber": "^1.1.0",
+        "gulp-pug": "^3.2.0",
+        "gulp-sass": "^3.0.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.5",
+        "eslint": "^3.12.2",
+        "gulp": "^3.9.1",
+        "gulp-bower": "0.0.13",
+        "gulp-livereload": "^3.8.1",
+        "babel-eslint": "^7.1.1",
+        "nodemon": "^1.11.0"
+    },
+    "babel": {
+        "presets": [
+            "node5"
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./server/app.js",
+        "dev": "nodemon -w ./ -x npm run start",
+        "gulp": "gulp serve"
+    },
+    "author": "Trisky",
+    "license": "ISC"
+}

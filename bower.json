@@ -1,0 +1,23 @@
+{
+  "name": "mutual",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Trisky"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
