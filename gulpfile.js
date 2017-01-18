@@ -5,6 +5,7 @@ var browserSync = require('browser-sync');
 var nodemon = require('gulp-nodemon'); //para browser-sync
 var plumber = require('gulp-plumber'); //para cuando pinchan los pipes, siempre ponerlo despues de la lectura del archivo
 var sass = require('gulp-sass');
+var wiredep = require('wiredep').stream;
 
 var bower = require('gulp-bower');
 
@@ -30,29 +31,26 @@ gulp.task('sass_old', function() {
         .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest(config.cssPath))
-        .pipe(browserSync.stream()); //para ver cambios de stilos en el browser sin refresh
+        .pipe(browserSync.stream());
 });
 
-gulp.task('icons', function() {
-    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*')
-        .pipe(gulp.dest('./public/fonts'));
-});
 
 gulp.task('sass', function() {
     return gulp.src(config.scssPath)
         .pipe(plumber())
-        //.pipe(sass())
         .pipe(sass({
             style: 'compressed',
             loadPath: [
-
-                config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
-                config.bowerDir + '/fontawesome/scss',
+                config.scssPath,
+                config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+                config.bowerDir + '/fontawesome/scss'
             ]
         }))
         .pipe(gulp.dest(config.cssPath))
         .pipe(browserSync.stream()); //para ver cambios de stilos en el browser sin refresh
 });
+
+
 
 
 
