@@ -5,21 +5,23 @@ html(lang="en")
     script(type='text/javascript').
     link(rel="stylesheet" href="css/style.css").
   body
-    header
-      .logo LOGO
-      .title Aguante no refrescar
   
-  middle
-    nav 
+    navbar
+        nav.navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    a(href='/').navbar-brand Mutual
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active 
+                            //- esto hay que hacerlo para que ande con angular-router
+                            a(href='/home') Home 
+                        li
+                            a(href='/asociados') Asociados
+                        li
+                            a(href='/admin') Admin
+                        li
+                            a(href='/salir') Salir
     
-        
-    main
-      h1  sass: node template engine
-      #container.col
-        if youAreUsingPug
-          p You are amazing
-        else
-          p Get on it!
-        p.
-          Pug is a terse and simple templating language with a
-          strong focus on performance and powerful features.
+
+

@@ -3,33 +3,27 @@ $font-stack: Helvetica,
 sans-serif;
 $primary-color: black;
 $second-color: orange;
-body {
-    font: 100% $font-stack;
-    color: $primary-color;
-}
-
-.col {
-    color: grey;
-}
-
-header {
-    display: flex;
-    text-align: center;
-    justify-content: flex-end;
-    background-color: lightgray;
-    color: $second-color;
-}
-
-.logo {
-    margin: auto;
-    background-color: lightgreen;
-}
-
-.title {
-    background-color: red;
-    margin: auto auto;
-}
-
-main {}
-
-nav {}
+// body {
+//     font: 100% $font-stack;
+//     color: $primary-color;
+// }
+// .col {
+//     color: grey;
+// }
+// // header {
+// //     display: flex;
+// //     text-align: center;
+// //     justify-content: flex-end;
+// //     background-color: lightgray;
+// //     color: $second-color;
+// // }
+// .logo {
+//     margin: auto;
+//     background-color: lightgreen;
+// }
+// .title {
+//     background-color: red;
+//     margin: auto auto;
+// }
+// main {}
+// nav {}

@@ -1,0 +1,44 @@
+socio
+
+===Datos particulares===
+
+legajo
+tipo de socio
+	-pasivo
+	-adherente
+	-jubilado
+
+numero de socio bigint
+fecha de ingreso
+fecha de baja
+apellido
+nombre
+domicilio
+localidad
+telefono
+celular
+codigo postal
+email
+tipoDNI
+dni
+sexo
+	-M
+	-F
+estado civil
+	-C
+	-S
+	-D
+	-V
+Fecha nacimiento
+
+
+===datos para cobranza===
+domicilio
+localidad
+telefono
+CP
+
+===datos referencia===
+carencia string
+fecha de confirmatoria de socio
+

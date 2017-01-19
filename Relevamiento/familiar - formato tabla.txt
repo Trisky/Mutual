@@ -1,0 +1,15 @@
+familiar
+
+one to many con socio
+
+apellido
+nombre
+parentesco
+	-hijo-discapacitado total permanente
+	-conyuge
+	-padre/madre
+	-suegro
+
+tipoDni
+dni
+

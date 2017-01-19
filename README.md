@@ -1,12 +1,15 @@
 # Mutual manager
 
+Carpeta relevamiento:
+Campos requeridos por reglas de negocio
 
+=================
 MySql dev enviroment:
 user = root
 pass = sarasa
 
 =================
-run:
+Run:
 npm install
 npm gulp
 
@@ -14,8 +17,6 @@ npm gulp
 TODO:
 Front-end
 Trello proyect
-
-
 
 =================
 Tecnologias:
@@ -29,7 +30,6 @@ Angular
 Sequalize
 MySql server
 Express
-
 
 -> Automation
 Gulp
