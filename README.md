@@ -21,19 +21,19 @@ Trello proyect
 =================
 Tecnologias:
 
-->Front-end
+->Front-end:
 Pug
 sass
 Angular
 
-->Back-end
+->Back-end:
 Sequalize
 MySql server
 Express
 
--> Automation
+-> Automation:
 Gulp
 
--> dev helpers
+-> dev helpers:
 nodemon
 browser-sync
