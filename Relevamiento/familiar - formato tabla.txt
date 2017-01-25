@@ -12,4 +12,5 @@ parentesco
 
 tipoDni
 dni
+sexo (M o F)
 
