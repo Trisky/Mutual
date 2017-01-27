@@ -1,5 +1,4 @@
 'use strict';
-import 'angular-ui-router';
 
 export function routes($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
@@ -9,12 +8,11 @@ export function routes($routeProvider, $locationProvider) {
     });
     $routeProvider
         .when('/', {
-            templateUrl: '/public/index.html',
+            templateUrl: '/home.html',
             controller: 'indexController',
         })
         .when('/asociados/', {
-            templateUrl: '/public/asociados.html',
+            templateUrl: '/asociados.html',
             controller: 'asociadosController',
         });
-    alert('routes');
 }

@@ -1,17 +1,17 @@
 'use strict';
 
 
-var angular = require('angular');
-var routes = require('./routes');
-//var ctrls = require('./controllers');
+var angular = require('../bower_components/angular');
+var angularRoute = require('../bower_components/angular-route');
 
-var indexController = require('./controllers/indexController');
-//var indexController = ctrls.indexController;
 
-//import { angular } from '@angular';
-// import { routes } from './routes';
-// import { indexController } from './controllers/indexController';
-console.log(routes);
+import { routes } from './routes';
+import { indexController } from './controllers/indexController';
+
+
 angular.module('App', ['ngRoute'])
     .config(routes)
     .controller('indexController', ['$scope', '$location'], indexController);
+
+
+//angular.bootstrap(document, ['App']);

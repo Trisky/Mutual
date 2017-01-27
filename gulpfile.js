@@ -97,18 +97,23 @@ gulp.task('js', function() {
     var watchi = watchify(browserify({ entries: './client/index.js', debug: true }));
     return watchi
         .transform('babelify', {
-            presets: ['es2015'],
-            "plugins": [
-                "transform-class-properties"
+            presets: ['es2015'], //,
+            plugins: [
+                'transform-class-properties'
             ]
         })
         .bundle()
         .pipe(source('bundle.js'))
-        //.pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(gulp.dest(config.jsDest));
+});
+gulp.task('js2', function() {
+    return browserify({ entries: './client/index.js', debug: true })
+        .transform('babelify', { presets: ['es2015'] })
+        .bundle()
+        .pipe(source('bundle.js'))
         //.pipe(buffer())
         //.pipe(uglify())
-        //.pipe(sourcemaps.write(config.jsDest))
-        .pipe(gulp.dest(config.jsDest));
+        .pipe(gulp.dest('public'));
 });
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
