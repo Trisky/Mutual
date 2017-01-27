@@ -3,6 +3,10 @@
 Carpeta relevamiento:
 Campos requeridos por reglas de negocio
 
+Paquetes globales necesarios (incompleto)
+browserify
+eslint
+
 =================
 MySql dev enviroment:
 user = root

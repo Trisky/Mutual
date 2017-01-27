@@ -14,7 +14,7 @@ html(lang="en")
                 #navbar.collapse.navbar-collapse
                     ul.nav.navbar-nav
                         li.active 
-                            //- esto hay que hacerlo para que ande con angular-router
+                            
                             a(href='/home') Home 
                         li
                             a(href='/asociados') Asociados
@@ -22,6 +22,8 @@ html(lang="en")
                             a(href='/admin') Admin
                         li
                             a(href='/salir') Salir
+    .container (ng-view)
+    script(src="bundle.js")
     
 
 

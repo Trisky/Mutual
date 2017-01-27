@@ -52,8 +52,5 @@ jspm_packages
 # Bower
 bower_components
 
-# visual studio code files
-.vscode
-
 #public folder
 public

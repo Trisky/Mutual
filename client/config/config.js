@@ -1,7 +1,6 @@
 'use strict';
 module.exports = {
-    "dev": {
-        "serverUrl": "localhost",
-        "serverPort": "8000"
+    'dev': {
+        'serverUrl': 'localhost:8000'
     }
 };
