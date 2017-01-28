@@ -91,29 +91,33 @@ gulp.task('nodemon', function(cb) {
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //frontend
-
+/////////////
+//uso browserify con transform para tener todo en ES2015, utilizo watchify para 
+//que cada vez que guardo un archivo no recompile todo si no que solamente los cambios (x100 performance)
 
 gulp.task('js', function() {
-    var watchi = watchify(browserify({ entries: './client/index.js', debug: true }));
-    return watchi
-        .transform('babelify', {
-            presets: ['es2015'], //,
-            plugins: [
-                'transform-class-properties'
-            ]
-        })
-        .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest(config.jsDest));
-});
-gulp.task('js2', function() {
-    return browserify({ entries: './client/index.js', debug: true })
-        .transform('babelify', { presets: ['es2015'] })
-        .bundle()
-        .pipe(source('bundle.js'))
-        //.pipe(buffer())
-        //.pipe(uglify())
-        .pipe(gulp.dest('public'));
+    var b = browserify({
+        entries: ['./client/index.js'],
+        cache: {},
+        packageCache: {},
+        plugin: [watchify]
+    });
+    b.on('update', bundle);
+    b.on('time', function(time) { console.log('js rebuild time =' + time) }); //rebuid time log
+    bundle();
+
+    function bundle() {
+        b
+            .transform('babelify', {
+                presets: ['es2015'], //,
+                plugins: [
+                    'transform-class-properties'
+                ]
+            })
+            .bundle()
+            .on('error', function(e) { throw e; }) //error handling
+            .pipe(fs.createWriteStream('./public/bundle.js'));
+    }
 });
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
