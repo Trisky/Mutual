@@ -33,8 +33,20 @@ var config = {
     jsDest: 'public'
 };
 
+//main gulp task
+gulp.task('serve', ['watch', 'nodemon', 'pug', 'sass', 'js'], function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: [config.destPath]
+        },
+        browser: "google chrome",
+        port: 7000,
+    });
+    gulp.watch(config.destPath + '/**.html').on('change', browserSync.reload);
+});
+
 gulp.task('pug', function() {
-    return gulp.src(config.pugPath) // Utilizamos Glob para compilar todo .pug de la carpeta
+    return gulp.src(config.pugPath)
         .pipe(plumber())
         .pipe(pug())
         .pipe(gulp.dest(config.destPath));
@@ -55,29 +67,22 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream()); //para ver cambios de stilos en el browser sin refresh
 });
 
-
 gulp.task('watch', function() {
     gulp.watch(config.pugPath, ['pug']);
     gulp.watch(config.scssPath, ['sass']);
 });
 
-gulp.task('serve', ['watch', 'nodemon', 'pug', 'sass', 'js'], function() { // main task 
-    browserSync.init(null, {
-        server: {
-            baseDir: [config.destPath]
-        },
-        browser: "google chrome",
-        port: 7000,
-    });
-    gulp.watch(config.destPath + '/**.html').on('change', browserSync.reload);
-});
+
 gulp.task('nodemon', function(cb) {
 
     var started = false;
 
     return nodemon({
         script: './server/app.js',
-        ignore: ['./client/**', './public/**', 'gulpfile.js']
+        ignore: ['./client/**', './public/**', 'gulpfile.js'],
+        watch: [
+            'server/**'
+        ]
     }).on('start', function() {
         // to avoid nodemon being started multiple times
         // thanks @matthisk
@@ -102,9 +107,11 @@ gulp.task('js', function() {
         packageCache: {},
         plugin: [watchify]
     });
-    b.on('update', bundle);
+
+
+    b.on('update', bundle); //bundle cada vez que cambio un archivo
     b.on('time', function(time) { console.log('js rebuild time =' + time) }); //rebuid time log
-    bundle();
+    bundle(); //primer bundle
 
     function bundle() {
         b
@@ -118,6 +125,7 @@ gulp.task('js', function() {
             .on('error', function(e) { throw e; }) //error handling
             .pipe(fs.createWriteStream('./public/bundle.js'));
     }
+
 });
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
