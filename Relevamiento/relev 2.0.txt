@@ -1,0 +1,9 @@
+Base de datos y Famila:
+Base(Consulta)
+Base(Sistema)
+Base datos(Actualización)
+Etiquetas a pedido
+Familia
+Famila(Actualización)
+Familia(Consulta)
+Marketing (Archivo)

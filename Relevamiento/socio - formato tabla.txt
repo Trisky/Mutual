@@ -1,16 +1,25 @@
 socio
 
 ===Datos particulares===
+numero de socio  (#autoincremental)
+legajo (asociado al número de lago)
+tipo de socio(7)
+	-activo (AC) 
+ 	-pasivo/jubilado (PA)
+	-adherente (AD) (todos los socios nuevos son estos, >90000)
+	-activo adherente (AA)
+	-activo adherente vitalicio (CA)
+	-absorvidos (AM)
+	-empleado (EM)
+	
+ex-legajo
 
-legajo
-tipo de socio
-	-pasivo
-	-adherente
-	-jubilado
-
-numero de socio bigint
 fecha de ingreso
 fecha de baja
+tipo de baja 
+	-fallecido (FA)
+	-baja sin motivo (BA)
+	-renuncia (RE)
 apellido
 nombre
 domicilio
@@ -20,7 +29,8 @@ celular
 codigo postal
 email
 tipoDNI
-dni
+	-li,dni,pass,
+numero_doc
 sexo
 	-M
 	-F
@@ -38,7 +48,8 @@ localidad
 telefono
 CP
 
-===datos referencia===
-carencia string
-fecha de confirmatoria de socio
+Descuento Automatico: (A.N.S.E.S.)
+Codigo De Descuento (se lo da a ANSES)
 
+
+=========

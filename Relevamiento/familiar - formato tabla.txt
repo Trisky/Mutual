@@ -1,15 +1,19 @@
 familiar
 
 one to many con socio
-
+legajo(del socio que se asoció inicialmente a la mutual)
 apellido
 nombre
 parentesco
-	-hijo-discapacitado total permanente
-	-conyuge
-	-padre/madre
+	-hijo 03
+	-discapacitado total permanente 
+	-conyuge 02
+ 	-padre/madre 
 	-suegro
-
+	-otra persona
+fecha de nacimiento
+codigo de descuento (anses)
+numero de beneficio(anses)
 tipoDni
 dni
 sexo (M o F)

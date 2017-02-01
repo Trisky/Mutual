@@ -1,0 +1,10 @@
+>reportes
+
+-ordenados por campo arbitrario (legajo)
+-count de socios por tipo con baja o sin baja
+
+>etiquetado
+nombre y ape
+direccion
+localidad
+CP
