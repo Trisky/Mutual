@@ -1,16 +1,19 @@
 'use strict';
 
-
-import { angular } from '../bower_components/angular';
-import { angularRoute } from '../bower_components/angular-route';
-
-
+//angular related modules
+import '../bower_components/angular';
 import { routes } from './routes';
-import { indexController } from './controllers/indexController';
+
+//controllers
+import {
+    indexController,
+    asociadosController,
+    adminController
+} from './controllers';
+
 
 angular.module('App', ['ngRoute'])
     .config(routes)
-    .controller('indexController', ['$scope', '$location'], indexController);
-
-
-//angular.bootstrap(document, ['App']);
+    .controller('indexController', ['$scope', '$location', indexController])
+    .controller('asociadosController', ['$scope', '$location', asociadosController])
+    .controller('adminController', ['$scope', '$location', adminController]);

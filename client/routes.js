@@ -1,5 +1,5 @@
 'use strict';
-
+import '../bower_components/angular-route';
 export function routes($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
         enabled: true,
@@ -12,7 +12,16 @@ export function routes($routeProvider, $locationProvider) {
             controller: 'indexController',
         })
         .when('/asociados/', {
-            templateUrl: '/asociados.html',
+            templateUrl: './asocList.html',
             controller: 'asociadosController',
+        })
+        .when('/asociados/crear', {
+            templateUrl: './asocCrear.html',
+            controller: 'asociadosController',
+        })
+        .when('/admin/', {
+            templateUrl: '/admin.html',
+            controller: 'adminController',
+
         });
-}
+};

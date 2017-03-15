@@ -24,7 +24,7 @@ var bower = require('gulp-bower');
 
 //config object
 var config = {
-    pugPath: './client/pug/*.pug',
+    pugPath: './client/pug/**/*.pug',
     destPath: 'public',
     scssPath: './client/scss/*.scss',
     cssPath: 'public/css',

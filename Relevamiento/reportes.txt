@@ -8,3 +8,7 @@ nombre y ape
 direccion
 localidad
 CP
+
+
+>historico de facturas
+pagas/no pagas

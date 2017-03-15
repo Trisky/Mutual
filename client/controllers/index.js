@@ -1,2 +1,4 @@
 'use strict';
-export * from './indexController'; //esto deberia ser mas generico
+export * from './indexController';
+export * from './asociadosController';
+export * from './adminController';
