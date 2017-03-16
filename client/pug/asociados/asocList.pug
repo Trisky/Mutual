@@ -7,10 +7,12 @@
                     h3.panel-title Filtros
                 .panel-body
                         p Nombre:
-                            input
-                            p Apellido:
-                                input
-                            button.btn.btn-sm.btn-default Buscar
+                        input( id="nombreInput",ng-model="nombreInput")
+                        p Apellido:
+                        input(id="apellidoInput",ng-model="apellidoInput")
+                        p CUIT:
+                        input(ng-model="cuitInput")
+                        button.btn.btn-sm.btn-default(ng-click="searchAsociado()") Buscar
 
 .col-md-9
    table.table.table-boardered
