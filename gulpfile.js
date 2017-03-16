@@ -108,9 +108,9 @@ gulp.task('js', function() {
         plugin: [watchify]
     });
 
-
+    b.on('update', function() { console.log('starting js rebuild'); });
     b.on('update', bundle); //bundle cada vez que cambio un archivo
-    b.on('time', function(time) { console.log('js rebuild time =' + time + ' ms'); }); //rebuid time log
+    b.on('time', function(time) { console.log('js rebuild time= ' + time + 'ms'); }); //rebuid time log
     bundle(); //primer bundle
 
     function bundle() {
