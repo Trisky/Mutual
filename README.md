@@ -2,33 +2,35 @@
 
 #Carpeta relevamiento:
 Campos requeridos por reglas de negocio
-
-#Paquetes globales necesarios (incompleto)
+ 
+# Paquetes globales necesarios (incompleto)
 browserify
 eslint
 
 
-#MySql dev enviroment:
+# MySql dev enviroment:
 user = root
 pass = sarasa
 
 
-#Run:
+# Run:
+```
 npm install
 npm run gulp
+```
 
-#TODO:
+# TODO:
 Front-end
 Trello proyect
 
 
 
-#Front-end:
+# Front-end:
 Pug,sass,Angular
 
-#Back-end:
+# Back-end:
 Sequalize, MySql server, Express
 
-#Tooling
+# Tooling
 Gulp, browser-sync, plumber, watchify
 
