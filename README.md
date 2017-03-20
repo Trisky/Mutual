@@ -1,43 +1,34 @@
-# Mutual manager
+# Mutual manager - in development
 
-Carpeta relevamiento:
+#Carpeta relevamiento:
 Campos requeridos por reglas de negocio
 
-Paquetes globales necesarios (incompleto)
+#Paquetes globales necesarios (incompleto)
 browserify
 eslint
 
-=================
-MySql dev enviroment:
+
+#MySql dev enviroment:
 user = root
 pass = sarasa
 
-=================
-Run:
-npm install
-npm gulp
 
-=================
-TODO:
+#Run:
+npm install
+npm run gulp
+
+#TODO:
 Front-end
 Trello proyect
 
-=================
-Tecnologias:
 
-->Front-end:
-Pug
-sass
-Angular
 
-->Back-end:
-Sequalize
-MySql server
-Express
+#Front-end:
+Pug,sass,Angular
 
--> Automation:
-Gulp
+#Back-end:
+Sequalize, MySql server, Express
 
--> dev helpers:
-nodemon
-browser-sync
+#Tooling
+Gulp, browser-sync, plumber, watchify
+
